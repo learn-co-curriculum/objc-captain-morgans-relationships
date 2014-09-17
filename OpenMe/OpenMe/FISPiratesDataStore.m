@@ -120,6 +120,7 @@ typedef NS_ENUM(NSInteger, EngineType) {
             currentShip.engine = [NSEntityDescription insertNewObjectForEntityForName:@"Engine" inManagedObjectContext:self.managedObjectContext];
             currentShip.engine.engineType = [self randomEngine];
             
+            [currentPirate addShipsObject:currentShip];
         }
     }
     

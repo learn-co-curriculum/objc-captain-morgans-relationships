@@ -7,31 +7,22 @@
 //
 
 #import "FISPiratesViewController.h"
+#import "FISPiratesDataStore.h"
 
 @interface FISPiratesViewController ()
 
+@property (strong, nonatomic) FISPiratesDataStore *store;
 @end
 
 @implementation FISPiratesViewController
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
+static NSString *const CellIdentifier = @"pirateCell";
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.store = [FISPiratesDataStore sharedPiratesDataStore];
+    [self.store fetchData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -42,26 +33,19 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return self.store.pirates.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    Pirate *currentPirate = self.store.pirates[indexPath.row];
     
-    // Configure the cell...
+    cell.textLabel.text = currentPirate.name;
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%lu", (unsigned long)currentPirate.ships.count];
     
     return cell;
 }

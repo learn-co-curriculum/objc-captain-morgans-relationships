@@ -14,6 +14,7 @@
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (strong, nonatomic) NSArray *pirates;
 
+- (void)fetchData;
 - (void)save;
 - (NSURL *)applicationDocumentsDirectory;
 
