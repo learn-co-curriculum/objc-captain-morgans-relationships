@@ -15,3 +15,7 @@ languages: objc
   6. Setup all three entities with relationships. 
   7. Create some test data into CoreData
   8. Make sure everything shows up!
+
+## Advanced
+
+  * Add two plus `UIBarButtonItems`. One on the pirates `tableviewcontroller` and one on the ships `tableviewcontroller`. When you click the plus it should go to a new `uiviewcontroller` that allows you to add a pirate, or a ship (with an engine!) to that pirate.
