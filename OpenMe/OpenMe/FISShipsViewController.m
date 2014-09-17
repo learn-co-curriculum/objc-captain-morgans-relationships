@@ -10,6 +10,8 @@
 #import "Ship.h"
 #import "Engine.h"
 #import "FISShipDetailViewController.h"
+#import "FISAddShipViewController.h"
+#import "FISPiratesDataStore.h"
 
 @interface FISShipsViewController ()
 
@@ -30,6 +32,15 @@ static NSString *const CellIdentifier = @"shipCell";
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    FISPiratesDataStore *store = [FISPiratesDataStore sharedPiratesDataStore];
+    [store fetchData];
+    [self.tableView reloadData];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -41,13 +52,14 @@ static NSString *const CellIdentifier = @"shipCell";
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return self.ships.count;
+    return self.pirate.ships.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    Ship *currentShip = self.ships[indexPath.row];
+    NSArray *ships = [self.pirate.ships allObjects];
+    Ship *currentShip = ships[indexPath.row];
     
     cell.textLabel.text = currentShip.name;
     cell.detailTextLabel.text = currentShip.engine.engineType;
@@ -99,10 +111,16 @@ static NSString *const CellIdentifier = @"shipCell";
 // In a story board-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    FISShipDetailViewController *nextVC = segue.destinationViewController;
-    NSIndexPath *selectedIP = [self.tableView indexPathForSelectedRow];
     
-    nextVC.ship = self.ships[selectedIP.row];
+    if (![segue.identifier isEqualToString:@"shipDetailSegue"]) {
+        FISAddShipViewController *nextVC = segue.destinationViewController;
+        nextVC.pirate = self.pirate;
+    } else {
+        FISShipDetailViewController *nextVC = segue.destinationViewController;
+        NSIndexPath *selectedIP = [self.tableView indexPathForSelectedRow];
+        NSArray *ships = [self.pirate.ships allObjects];
+        nextVC.ship = ships[selectedIP.row];
+    }
 }
 
 

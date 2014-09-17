@@ -1,21 +1,24 @@
 //
-//  FISAddPirateViewController.m
+//  FISAddShipViewController.m
 //  OpenMe
 //
 //  Created by Chris Gonzales on 9/17/14.
 //  Copyright (c) 2014 Joe Burgess. All rights reserved.
 //
 
-#import "FISAddPirateViewController.h"
+#import "FISAddShipViewController.h"
 #import "FISPiratesDataStore.h"
-#import "Pirate.h"
+#import "Ship.h"
+#import "Engine.h"
 
-@interface FISAddPirateViewController ()
-@property (weak, nonatomic) IBOutlet UITextField *pirateNameField;
+@interface FISAddShipViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *shipNameField;
+@property (weak, nonatomic) IBOutlet UITextField *engineTypeField;
 
 @end
 
-@implementation FISAddPirateViewController
+@implementation FISAddShipViewController
+
 
 - (void)viewDidLoad
 {
@@ -31,8 +34,12 @@
 
 - (IBAction)saveButtonTapped:(id)sender {
     FISPiratesDataStore *store = [FISPiratesDataStore sharedPiratesDataStore];
-    Pirate *newPirate = [NSEntityDescription insertNewObjectForEntityForName:@"Pirate" inManagedObjectContext:store.managedObjectContext];
-    newPirate.name = self.pirateNameField.text;
+    Ship *newShip = [NSEntityDescription insertNewObjectForEntityForName:@"Ship" inManagedObjectContext:store.managedObjectContext];
+    newShip.name = self.shipNameField.text;
+    newShip.engine = [NSEntityDescription insertNewObjectForEntityForName:@"Engine" inManagedObjectContext:store.managedObjectContext];
+    newShip.engine.engineType = self.engineTypeField.text;
+    
+    [self.pirate addShipsObject:newShip];
     
     [store save];
     [self dismissViewControllerAnimated:YES completion:nil];

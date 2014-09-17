@@ -52,7 +52,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="pirateNameLabel" destination="LCj-XG-f9y" id="Uil-eO-hSQ"/>
+                        <outlet property="pirateNameField" destination="LCj-XG-f9y" id="mJo-zW-4dO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r2P-CZ-aiX" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -216,7 +216,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="M8v-D0-qZp" kind="push" id="SyK-qo-UYE"/>
+                                    <segue destination="M8v-D0-qZp" kind="push" identifier="shipDetailSegue" id="SyK-qo-UYE"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -257,10 +257,10 @@
             </objects>
             <point key="canvasLocation" x="58" y="58"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Ship View Controller-->
         <scene sceneID="mcF-68-ivJ">
             <objects>
-                <viewController id="jDg-9C-oN9" sceneMemberID="viewController">
+                <viewController id="jDg-9C-oN9" customClass="FISAddShipViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zg8-XA-aCM"/>
                         <viewControllerLayoutGuide type="bottom" id="qnJ-gW-S42"/>
@@ -287,6 +287,9 @@
                                 <state key="normal" title="Cancel">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="cancelButtonTapped:" destination="jDg-9C-oN9" eventType="touchUpInside" id="ayI-dN-1IE"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zfB-aD-3vY">
                                 <rect key="frame" x="20" y="182" width="280" height="30"/>
@@ -294,6 +297,9 @@
                                 <state key="normal" title="Save">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="saveButtonTapped:" destination="jDg-9C-oN9" eventType="touchUpInside" id="7EZ-Tx-JlE"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Engine Type" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gt1-Gg-zR1">
                                 <rect key="frame" x="20" y="139" width="280" height="30"/>
@@ -304,6 +310,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="engineTypeField" destination="Gt1-Gg-zR1" id="XmX-gp-KeQ"/>
+                        <outlet property="shipNameField" destination="GZY-Ld-pJ6" id="geV-13-Xhc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GS6-Io-UnB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

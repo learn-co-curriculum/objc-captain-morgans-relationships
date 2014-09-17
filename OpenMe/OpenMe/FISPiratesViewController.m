@@ -108,7 +108,7 @@ static NSString *const CellIdentifier = @"pirateCell";
     NSIndexPath *selectedIP = [self.tableView indexPathForSelectedRow];
     Pirate *selectedPirate = self.store.pirates[selectedIP.row];
     
-    nextVC.ships = [selectedPirate.ships allObjects];
+    nextVC.pirate = selectedPirate;
     
 }
 
