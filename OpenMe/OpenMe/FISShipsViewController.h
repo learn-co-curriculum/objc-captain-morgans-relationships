@@ -10,4 +10,6 @@
 
 @interface FISShipsViewController : UITableViewController
 
+@property (strong, nonatomic) NSArray *ships;
+
 @end

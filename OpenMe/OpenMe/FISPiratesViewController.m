@@ -8,6 +8,7 @@
 
 #import "FISPiratesViewController.h"
 #import "FISPiratesDataStore.h"
+#import "FISShipsViewController.h"
 
 @interface FISPiratesViewController ()
 
@@ -89,16 +90,18 @@ static NSString *const CellIdentifier = @"pirateCell";
 }
 */
 
-/*
 #pragma mark - Navigation
 
 // In a story board-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    FISShipsViewController *nextVC = segue.destinationViewController;
+    NSIndexPath *selectedIP = [self.tableView indexPathForSelectedRow];
+    Pirate *selectedPirate = self.store.pirates[selectedIP.row];
+    
+    nextVC.ships = [selectedPirate.ships allObjects];
+    
 }
 
- */
 
 @end

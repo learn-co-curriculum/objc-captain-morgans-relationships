@@ -24,7 +24,6 @@
 		D8DCF91018C54AE0002AB285 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8DCF8F318C54AE0002AB285 /* UIKit.framework */; };
 		D8DCF91118C54AE0002AB285 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8DCF8F518C54AE0002AB285 /* CoreData.framework */; };
 		D8DCF91918C54AE0002AB285 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D8DCF91718C54AE0002AB285 /* InfoPlist.strings */; };
-		D8DCF91B18C54AE0002AB285 /* OpenMeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D8DCF91A18C54AE0002AB285 /* OpenMeTests.m */; };
 		D8DCF92518C54AF0002AB285 /* main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8DCF92418C54AF0002AB285 /* main.storyboard */; };
 		D8DCF96918C60C65002AB285 /* FISPiratesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8DCF96818C60C65002AB285 /* FISPiratesViewController.m */; };
 		D8DCF96C18C60C6D002AB285 /* FISShipsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8DCF96B18C60C6D002AB285 /* FISShipsViewController.m */; };
@@ -66,7 +65,6 @@
 		D8DCF90D18C54AE0002AB285 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		D8DCF91618C54AE0002AB285 /* OpenMeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OpenMeTests-Info.plist"; sourceTree = "<group>"; };
 		D8DCF91818C54AE0002AB285 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		D8DCF91A18C54AE0002AB285 /* OpenMeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenMeTests.m; sourceTree = "<group>"; };
 		D8DCF92418C54AF0002AB285 /* main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = main.storyboard; sourceTree = "<group>"; };
 		D8DCF96718C60C65002AB285 /* FISPiratesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISPiratesViewController.h; sourceTree = "<group>"; };
 		D8DCF96818C60C65002AB285 /* FISPiratesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISPiratesViewController.m; sourceTree = "<group>"; };
@@ -192,7 +190,6 @@
 		D8DCF91418C54AE0002AB285 /* OpenMeTests */ = {
 			isa = PBXGroup;
 			children = (
-				D8DCF91A18C54AE0002AB285 /* OpenMeTests.m */,
 				D8DCF91518C54AE0002AB285 /* Supporting Files */,
 			);
 			path = OpenMeTests;
@@ -321,7 +318,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8DCF91B18C54AE0002AB285 /* OpenMeTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
