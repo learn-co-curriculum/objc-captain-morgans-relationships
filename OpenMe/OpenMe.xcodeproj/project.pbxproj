@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7250450019CA302D00192888 /* FISAddPirateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 725044FF19CA302D00192888 /* FISAddPirateViewController.m */; };
 		72E77FC419C9DF02009467D7 /* Pirate.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E77FC319C9DF02009467D7 /* Pirate.m */; };
 		72E77FC719C9DF02009467D7 /* Engine.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E77FC619C9DF02009467D7 /* Engine.m */; };
 		72E77FCA19C9DF02009467D7 /* Ship.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E77FC919C9DF02009467D7 /* Ship.m */; };
@@ -42,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		725044FE19CA302D00192888 /* FISAddPirateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISAddPirateViewController.h; sourceTree = "<group>"; };
+		725044FF19CA302D00192888 /* FISAddPirateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISAddPirateViewController.m; sourceTree = "<group>"; };
 		72E77FC219C9DF02009467D7 /* Pirate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pirate.h; sourceTree = "<group>"; };
 		72E77FC319C9DF02009467D7 /* Pirate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pirate.m; sourceTree = "<group>"; };
 		72E77FC519C9DF02009467D7 /* Engine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Engine.h; sourceTree = "<group>"; };
@@ -121,6 +124,8 @@
 		724DB7F119C9CD3600945D93 /* view controllers */ = {
 			isa = PBXGroup;
 			children = (
+				725044FE19CA302D00192888 /* FISAddPirateViewController.h */,
+				725044FF19CA302D00192888 /* FISAddPirateViewController.m */,
 				D8DCF96718C60C65002AB285 /* FISPiratesViewController.h */,
 				D8DCF96818C60C65002AB285 /* FISPiratesViewController.m */,
 				D8DCF96A18C60C6D002AB285 /* FISShipsViewController.h */,
@@ -305,6 +310,7 @@
 				D8DCF96F18C60C7E002AB285 /* FISShipDetailViewController.m in Sources */,
 				D8DCF8FE18C54AE0002AB285 /* main.m in Sources */,
 				D8DCF96C18C60C6D002AB285 /* FISShipsViewController.m in Sources */,
+				7250450019CA302D00192888 /* FISAddPirateViewController.m in Sources */,
 				D8DCF90518C54AE0002AB285 /* OpenMe.xcdatamodeld in Sources */,
 				72E77FCA19C9DF02009467D7 /* Ship.m in Sources */,
 				D8DCF96918C60C65002AB285 /* FISPiratesViewController.m in Sources */,

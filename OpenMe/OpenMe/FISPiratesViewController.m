@@ -23,9 +23,15 @@ static NSString *const CellIdentifier = @"pirateCell";
 {
     [super viewDidLoad];
     self.store = [FISPiratesDataStore sharedPiratesDataStore];
-    [self.store fetchData];
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [self.store fetchData];
+    [self.tableView reloadData];
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -95,6 +101,9 @@ static NSString *const CellIdentifier = @"pirateCell";
 // In a story board-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    if (![segue.identifier isEqualToString:@"shipsSegue"]) {
+        return;
+    }
     FISShipsViewController *nextVC = segue.destinationViewController;
     NSIndexPath *selectedIP = [self.tableView indexPathForSelectedRow];
     Pirate *selectedPirate = self.store.pirates[selectedIP.row];
