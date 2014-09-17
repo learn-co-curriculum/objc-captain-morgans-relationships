@@ -9,11 +9,12 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
+@class Engine, Pirate;
 
 @interface Ship : NSManagedObject
 
 @property (nonatomic, retain) NSString * name;
-@property (nonatomic, retain) NSManagedObject *pirate;
-@property (nonatomic, retain) NSManagedObject *engine;
+@property (nonatomic, retain) Engine *engine;
+@property (nonatomic, retain) Pirate *pirate;
 
 @end

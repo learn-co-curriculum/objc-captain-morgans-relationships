@@ -7,12 +7,14 @@
 //
 
 #import "Ship.h"
+#import "Engine.h"
+#import "Pirate.h"
 
 
 @implementation Ship
 
 @dynamic name;
-@dynamic pirate;
 @dynamic engine;
+@dynamic pirate;
 
 @end

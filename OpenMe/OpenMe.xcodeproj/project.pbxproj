@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		724DB7E919C9CD1B00945D93 /* Ship.m in Sources */ = {isa = PBXBuildFile; fileRef = 724DB7E819C9CD1B00945D93 /* Ship.m */; };
-		724DB7EC19C9CD1C00945D93 /* Engine.m in Sources */ = {isa = PBXBuildFile; fileRef = 724DB7EB19C9CD1C00945D93 /* Engine.m */; };
-		724DB7EF19C9CD1C00945D93 /* Pirate.m in Sources */ = {isa = PBXBuildFile; fileRef = 724DB7EE19C9CD1C00945D93 /* Pirate.m */; };
+		72E77FC419C9DF02009467D7 /* Pirate.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E77FC319C9DF02009467D7 /* Pirate.m */; };
+		72E77FC719C9DF02009467D7 /* Engine.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E77FC619C9DF02009467D7 /* Engine.m */; };
+		72E77FCA19C9DF02009467D7 /* Ship.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E77FC919C9DF02009467D7 /* Ship.m */; };
 		D8DCF8F018C54AE0002AB285 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8DCF8EF18C54AE0002AB285 /* Foundation.framework */; };
 		D8DCF8F218C54AE0002AB285 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8DCF8F118C54AE0002AB285 /* CoreGraphics.framework */; };
 		D8DCF8F418C54AE0002AB285 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8DCF8F318C54AE0002AB285 /* UIKit.framework */; };
@@ -43,12 +43,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		724DB7E719C9CD1B00945D93 /* Ship.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ship.h; sourceTree = "<group>"; };
-		724DB7E819C9CD1B00945D93 /* Ship.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ship.m; sourceTree = "<group>"; };
-		724DB7EA19C9CD1C00945D93 /* Engine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Engine.h; sourceTree = "<group>"; };
-		724DB7EB19C9CD1C00945D93 /* Engine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Engine.m; sourceTree = "<group>"; };
-		724DB7ED19C9CD1C00945D93 /* Pirate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pirate.h; sourceTree = "<group>"; };
-		724DB7EE19C9CD1C00945D93 /* Pirate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pirate.m; sourceTree = "<group>"; };
+		72E77FC219C9DF02009467D7 /* Pirate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pirate.h; sourceTree = "<group>"; };
+		72E77FC319C9DF02009467D7 /* Pirate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pirate.m; sourceTree = "<group>"; };
+		72E77FC519C9DF02009467D7 /* Engine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Engine.h; sourceTree = "<group>"; };
+		72E77FC619C9DF02009467D7 /* Engine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Engine.m; sourceTree = "<group>"; };
+		72E77FC819C9DF02009467D7 /* Ship.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ship.h; sourceTree = "<group>"; };
+		72E77FC919C9DF02009467D7 /* Ship.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ship.m; sourceTree = "<group>"; };
 		D8DCF8EC18C54AE0002AB285 /* OpenMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8DCF8EF18C54AE0002AB285 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D8DCF8F118C54AE0002AB285 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -109,13 +109,13 @@
 			children = (
 				D8DCF97018C60C8F002AB285 /* FISPiratesDataStore.h */,
 				D8DCF97118C60C8F002AB285 /* FISPiratesDataStore.m */,
+				72E77FC219C9DF02009467D7 /* Pirate.h */,
+				72E77FC819C9DF02009467D7 /* Ship.h */,
+				72E77FC919C9DF02009467D7 /* Ship.m */,
+				72E77FC519C9DF02009467D7 /* Engine.h */,
+				72E77FC619C9DF02009467D7 /* Engine.m */,
+				72E77FC319C9DF02009467D7 /* Pirate.m */,
 				D8DCF90318C54AE0002AB285 /* OpenMe.xcdatamodeld */,
-				724DB7ED19C9CD1C00945D93 /* Pirate.h */,
-				724DB7EE19C9CD1C00945D93 /* Pirate.m */,
-				724DB7EA19C9CD1C00945D93 /* Engine.h */,
-				724DB7EB19C9CD1C00945D93 /* Engine.m */,
-				724DB7E719C9CD1B00945D93 /* Ship.h */,
-				724DB7E819C9CD1B00945D93 /* Ship.m */,
 			);
 			name = models;
 			sourceTree = "<group>";
@@ -304,16 +304,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				724DB7EF19C9CD1C00945D93 /* Pirate.m in Sources */,
+				72E77FC419C9DF02009467D7 /* Pirate.m in Sources */,
 				D8DCF96F18C60C7E002AB285 /* FISShipDetailViewController.m in Sources */,
 				D8DCF8FE18C54AE0002AB285 /* main.m in Sources */,
-				724DB7EC19C9CD1C00945D93 /* Engine.m in Sources */,
 				D8DCF96C18C60C6D002AB285 /* FISShipsViewController.m in Sources */,
 				D8DCF90518C54AE0002AB285 /* OpenMe.xcdatamodeld in Sources */,
+				72E77FCA19C9DF02009467D7 /* Ship.m in Sources */,
 				D8DCF96918C60C65002AB285 /* FISPiratesViewController.m in Sources */,
-				724DB7E919C9CD1B00945D93 /* Ship.m in Sources */,
 				D8DCF90218C54AE0002AB285 /* FISAppDelegate.m in Sources */,
 				D8DCF97218C60C8F002AB285 /* FISPiratesDataStore.m in Sources */,
+				72E77FC719C9DF02009467D7 /* Engine.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
