@@ -16,4 +16,4 @@
 
 1. Add two plus `UIBarButtonItems`. One on `FISPiratesViewController` and one on `FISShipsViewController`. When you click the plus it should modally present a new view controller that allows the user to add a either new pirate, or a new ship (which needs an engine and should be associated with a pirate!) to the database.
 
-<a href='https://learn.co/lessons/objc-captain-morgans-relationships' data-visibility='hidden'>View this lesson on Learn.co</a>
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/objc-captain-morgans-relationships' title='Captain Morgans Relationships'>Captain Morgans Relationships</a> on Learn.co and start learning to code for free.</p>
